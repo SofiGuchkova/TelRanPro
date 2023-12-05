@@ -1,0 +1,61 @@
+Задание 1. 10 примеров бизнес-процессов для предметной области YouTube и их соответствие по CRUD:
+
+1. Просмотр Видео — CRUD: Read
+2. Комментирование — CRUD: Create(создание комментария) + Update(изменение комментария) + Delete(удаление комментария)
+3. Проставление реакции — CRUD: Create(мы создаем реакцию) + Update (количество реакций под роликом изменяется)
+4. Блокировка сообщений (бан) — CRUD: Update (черный список) + Delete (удаление сообщения)
+5. Поиск видео — CRUD: Read
+6. Подписка на канал — CRUD: Update (is_subscribed)
+7. Мои Видео — CRUD: Read
+8. Youtube Studio — Create (создание контента)
+9. Youtube реклама — Create(создание контента рекламы) + Update (изменение параметров аудитории — кому реклама будет показыватся)
+10.Монетизация — Create (cоздание монитизированного контента) + Update (изменение немонитизированного видео на монитизированное)
+
+Задание 2. Вывести название и стоимость товаров от 20 до 150 EUR
+
+SELECT
+ProductName,
+Price
+FROM Products
+WHERE
+Price >=20
+and
+Price <=120
+
+Задание 3. Вывести страны поставщиков, кроме тех, что из USA.
+
+SELECT DISTINCT
+Country
+FROM Suppliers
+WHERE
+Country != 'USA'
+
+Задание 4. Вывести перевозчика с ID 1 (Так как непонятно условие "Вывести перевозчика"  - вывела имя и телефон )
+
+SELECT
+ShipperName,
+Phone
+FROM Shippers
+WHERE
+ShipperID = '1'
+
+Задание 5. Вывести контактные имена клиентов, кроме тех, что из France и USA.
+
+SELECT
+ContactName,
+Country
+FROM Customers
+WHERE
+(Country != 'France' and Country != 'USA')
+
+Задание 6. Вывести страну, город и адрес всех поставщиков, кроме тех, что из Japan и Brazil
+
+SELECT
+Country,
+City,
+Address
+FROM Suppliers
+WHERE
+Country != 'Japan'
+and
+Country != 'Brazil'
